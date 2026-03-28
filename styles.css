@@ -2089,8 +2089,7 @@ section {
   .problem-stats {
     flex-direction: row;
     gap: 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    border: none;
     padding: 28px 0;
     margin-bottom: 48px;
   }
