@@ -2085,8 +2085,26 @@ section {
   .social-proof { padding: 20px 0 24px; }
   .social-proof-label { margin-bottom: 20px; font-size: 12px; }
 
-  /* Problem */
-  .problem-stats { flex-direction: column; gap: 24px; }
+  /* Problem - stats in a row like Duna */
+  .problem-stats {
+    flex-direction: row;
+    gap: 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 0;
+    margin-bottom: 48px;
+  }
+  .problem-stat {
+    flex: 1;
+    text-align: left;
+  }
+  .problem-stat-number {
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 4px;
+  }
+  .problem-stat-label {
+    font-size: 13px;
+  }
   .problem-cards { grid-template-columns: 1fr; }
   .problem-card {
     border-right: none;
