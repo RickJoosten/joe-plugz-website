@@ -160,15 +160,26 @@
   <section class="social-proof">
     <div class="container">
       <p class="social-proof-label fade-in">Vertrouwd door marktleiders</p>
-      <div class="social-proof-logos fade-in">
-        <img src="assets/logos/eneco-emobility.svg" alt="Eneco eMobility" height="28">
-        <img src="assets/logos/last-mile-solutions.svg" alt="Last Mile Solutions" height="24">
-        <img src="assets/logos/greenflux.svg" alt="GreenFlux" height="26">
-        <img src="assets/logos/firmenladen.svg" alt="Firmenladen" height="26">
-        <img src="assets/logos/50five.svg" alt="50five" height="26">
-        <img src="assets/logos/multitankcard.svg" alt="MultiTankcard" height="24">
-        <img src="assets/logos/engie.svg" alt="Engie" height="26">
-        <img src="assets/logos/vab.svg" alt="VAB" height="28">
+      <div class="marquee-track fade-in">
+        <div class="marquee-content">
+          <img src="assets/logos/eneco-emobility.svg" alt="Eneco eMobility" height="28">
+          <img src="assets/logos/last-mile-solutions.svg" alt="Last Mile Solutions" height="24">
+          <img src="assets/logos/greenflux.svg" alt="GreenFlux" height="26">
+          <img src="assets/logos/firmenladen.svg" alt="Firmenladen" height="26">
+          <img src="assets/logos/50five.svg" alt="50five" height="26">
+          <img src="assets/logos/multitankcard.svg" alt="MultiTankcard" height="24">
+          <img src="assets/logos/engie.svg" alt="Engie" height="26">
+          <img src="assets/logos/vab.svg" alt="VAB" height="28">
+          <!-- duplicate for seamless loop -->
+          <img src="assets/logos/eneco-emobility.svg" alt="Eneco eMobility" height="28">
+          <img src="assets/logos/last-mile-solutions.svg" alt="Last Mile Solutions" height="24">
+          <img src="assets/logos/greenflux.svg" alt="GreenFlux" height="26">
+          <img src="assets/logos/firmenladen.svg" alt="Firmenladen" height="26">
+          <img src="assets/logos/50five.svg" alt="50five" height="26">
+          <img src="assets/logos/multitankcard.svg" alt="MultiTankcard" height="24">
+          <img src="assets/logos/engie.svg" alt="Engie" height="26">
+          <img src="assets/logos/vab.svg" alt="VAB" height="28">
+        </div>
       </div>
     </div>
   </section>
@@ -188,8 +199,8 @@
           <p class="problem-stat-label">Klanttevredenheid</p>
         </div>
         <div class="problem-stat">
-          <div class="problem-stat-number" data-target="2.50" data-prefix="&euro;" data-suffix="" data-decimals="2" data-comma="true">&euro;0,00</div>
-          <p class="problem-stat-label">Per gesprek vanaf</p>
+          <div class="problem-stat-number" data-target="2" data-prefix="<" data-suffix=" min" data-decimals="0">&lt;0 min</div>
+          <p class="problem-stat-label">Gemiddelde afhandeltijd</p>
         </div>
       </div>
 
@@ -400,6 +411,15 @@
     </div>
   </section>
 
+  <!-- ===== STRIP CTA ===== -->
+  <section class="strip-cta fade-in">
+    <div class="container strip-cta-inner">
+      <span class="strip-cta-badge">AI-powered</span>
+      <p class="strip-cta-text">Ontdek hoe Joe jouw support transformeert.</p>
+      <a href="#contact" class="strip-cta-link">Plan een demo &rarr;</a>
+    </div>
+  </section>
+
   <!-- ===== METRICS ===== -->
   <section class="metrics">
     <div class="container">
@@ -471,6 +491,39 @@
             <a href="#" class="about-linkedin"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> Founder 2</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWS ===== -->
+  <section class="news" id="nieuws">
+    <div class="container">
+      <div class="news-header fade-in">
+        <h2 class="news-heading">Nieuws</h2>
+        <a href="blog.html" class="news-see-more">Bekijk meer &rarr;</a>
+      </div>
+      <div class="news-grid fade-in">
+        <a href="#" class="news-card">
+          <div class="news-card-image" style="background: linear-gradient(135deg, #1a8a5c 0%, #2dd4a0 100%);">
+            <span class="news-card-logo">Plugz</span>
+          </div>
+          <h3>Hoe AI de EV charging klantenservice transformeert</h3>
+          <p class="news-card-meta">Product &mdash; 5 min read</p>
+        </a>
+        <a href="#" class="news-card">
+          <div class="news-card-image" style="background: linear-gradient(135deg, #0d6644 0%, #18F291 100%);">
+            <svg class="news-card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>
+          </div>
+          <h3>92% containment rate: wat betekent dat voor jouw operatie?</h3>
+          <p class="news-card-meta">Insights &mdash; 4 min read</p>
+        </a>
+        <a href="#" class="news-card">
+          <div class="news-card-image" style="background: #f0f0f0;">
+            <span class="news-card-quote">&ldquo;Joe heeft onze operaties fundamenteel veranderd&rdquo;</span>
+          </div>
+          <h3>Case study: 50five schaalt support met AI voice agent</h3>
+          <p class="news-card-meta">Case study &mdash; 7 min read</p>
+        </a>
       </div>
     </div>
   </section>

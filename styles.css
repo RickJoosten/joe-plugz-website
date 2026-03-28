@@ -480,7 +480,7 @@ section {
 
 /* ===== SOCIAL PROOF ===== */
 .social-proof {
-  padding: 48px 0 56px;
+  padding: 24px 0 32px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -494,25 +494,40 @@ section {
   font-weight: 500;
 }
 
-.social-proof-logos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(20px, 3.5vw, 44px);
-  flex-wrap: wrap;
+.marquee-track {
+  overflow: hidden;
+  width: 100%;
 }
 
-.social-proof-logos img {
+.marquee-content {
+  display: flex;
+  align-items: center;
+  gap: clamp(32px, 4vw, 56px);
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+.marquee-content img {
   height: 28px;
   width: auto;
   opacity: 0.45;
   filter: grayscale(100%);
   transition: opacity 300ms var(--ease), filter 300ms var(--ease);
+  flex-shrink: 0;
 }
 
-.social-proof-logos img:hover {
+.marquee-content img:hover {
   opacity: 0.8;
   filter: grayscale(0%);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ===== PROBLEM ===== */
@@ -935,6 +950,51 @@ section {
   color: #f59e0b;
 }
 
+/* ===== STRIP CTA ===== */
+.strip-cta {
+  padding: 20px 0;
+  background: rgba(24, 242, 145, 0.06);
+  border-top: 1px solid rgba(24, 242, 145, 0.1);
+  border-bottom: 1px solid rgba(24, 242, 145, 0.1);
+}
+
+.strip-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.strip-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  background: rgba(24, 242, 145, 0.15);
+  color: var(--green-dark);
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.3px;
+}
+
+.strip-cta-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--body);
+}
+
+.strip-cta-link {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--green-dark);
+  transition: color 200ms var(--ease);
+}
+
+.strip-cta-link:hover {
+  color: var(--heading);
+}
+
 /* ===== METRICS ===== */
 .metrics {
   background: var(--bg);
@@ -1340,6 +1400,88 @@ section {
   display: inline-block;
 }
 
+/* ===== NEWS ===== */
+.news {
+  background: #fff;
+}
+
+.news-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 40px;
+}
+
+.news-heading {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--heading);
+}
+
+.news-see-more {
+  font-size: 15px;
+  color: var(--muted);
+  transition: color 200ms var(--ease);
+}
+
+.news-see-more:hover {
+  color: var(--heading);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.news-card {
+  display: block;
+  text-decoration: none;
+}
+
+.news-card-image {
+  height: 240px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.news-card-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.news-card-icon {
+  display: block;
+}
+
+.news-card-quote {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--heading);
+  padding: 24px;
+  text-align: center;
+}
+
+.news-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--heading);
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.news-card-meta {
+  font-size: 14px;
+  color: var(--muted);
+}
+
 /* ===== SAFE & SECURE ===== */
 .safe-secure {
   background: #f7f8fa;
@@ -1742,6 +1884,8 @@ section {
 
   .about-card { padding: 32px; }
 
+  .news-grid { grid-template-columns: 1fr; max-width: 480px; }
+
   .safe-secure-badges { gap: 20px; }
   .trust-badge-circle { width: 64px; height: 64px; }
 
@@ -1763,11 +1907,8 @@ section {
 @media (max-width: 480px) {
   .metrics-bento { grid-template-columns: 1fr; }
 
-  .social-proof-logos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px 8px;
-    justify-items: center;
+  .marquee-content {
+    gap: 24px;
   }
 
   .hero-ctas {
