@@ -1884,6 +1884,12 @@ section {
   position: relative;
   transform: translateY(20px) scale(0.97);
   transition: transform 300ms var(--ease);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.article-modal::-webkit-scrollbar {
+  display: none;
 }
 
 .article-modal-overlay.open .article-modal {
