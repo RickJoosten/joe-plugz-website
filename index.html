@@ -231,21 +231,79 @@
       <span class="features-badge fade-in">Het platform</span>
       <h2 class="section-heading fade-in">Hoe Joe voor jou werkt</h2>
 
+      <!-- Desktop: tab/visual split | Mobile: stacking cards -->
       <div class="features-ecosystem fade-in">
         <div class="features-tabs">
           <button class="feature-tab active" data-tab="0">
             <h3>AI support agents</h3>
             <p>24/7 driver support via voice, chat en e-mail — in 30+ talen. Joe past zich aan jouw merk aan en lost problemen autonoom op. Vanaf &euro;2,50 per gesprek.</p>
+            <!-- Mobile inline visual -->
+            <div class="feature-inline-visual">
+              <div class="visual-mockup">
+                <div class="visual-chat">
+                  <div class="chat-header">
+                    <span class="chat-status"></span>
+                    Calling... <span class="chat-label">AI voice agent</span>
+                  </div>
+                  <div class="chat-bubble agent">Hallo, ik ben Joe van Plugz. Waarmee kan ik je helpen?</div>
+                  <div class="chat-bubble user">Mijn laadsessie start niet op locatie Amsterdam-Zuid.</div>
+                  <div class="chat-bubble agent">Ik check je sessie en de status van het laadpunt. Een moment...</div>
+                  <div class="chat-bubble agent resolved">Ik heb een remote reset uitgevoerd. Je kunt nu opnieuw starten.</div>
+                </div>
+              </div>
+            </div>
           </button>
           <button class="feature-tab" data-tab="1">
             <h3>Support dashboard</h3>
             <p>Zie live KPIs — containment rate, gesprekskwaliteit, AHT — in &eacute;&eacute;n overzicht. Drill into gesprekken met OCPP logs en fine-tune Joe's gedrag in real-time.</p>
+            <!-- Mobile inline visual -->
+            <div class="feature-inline-visual">
+              <div class="visual-mockup">
+                <div class="visual-dashboard">
+                  <div class="dash-row">
+                    <div class="dash-kpi"><span class="dash-kpi-num">92%</span><span class="dash-kpi-label">Containment</span></div>
+                    <div class="dash-kpi"><span class="dash-kpi-num">4.6</span><span class="dash-kpi-label">CSAT score</span></div>
+                    <div class="dash-kpi"><span class="dash-kpi-num">1:42</span><span class="dash-kpi-label">Avg handle time</span></div>
+                  </div>
+                  <div class="dash-bar-chart">
+                    <div class="dash-bar" style="height:70%"></div>
+                    <div class="dash-bar" style="height:85%"></div>
+                    <div class="dash-bar" style="height:60%"></div>
+                    <div class="dash-bar" style="height:92%"></div>
+                    <div class="dash-bar" style="height:78%"></div>
+                    <div class="dash-bar" style="height:88%"></div>
+                    <div class="dash-bar" style="height:95%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </button>
           <button class="feature-tab" data-tab="2">
             <h3>Proactieve monitoring</h3>
             <p>Monitor je netwerk end-to-end met anomaly detection en real-time health scores. Voorkom storingen met self-healing automations zoals proactieve resets.</p>
+            <!-- Mobile inline visual -->
+            <div class="feature-inline-visual">
+              <div class="visual-mockup">
+                <div class="visual-monitoring">
+                  <div class="monitor-header">Network Health</div>
+                  <div class="monitor-grid">
+                    <div class="monitor-node ok"><span>AMS-01</span><span class="monitor-dot green"></span></div>
+                    <div class="monitor-node ok"><span>RTD-03</span><span class="monitor-dot green"></span></div>
+                    <div class="monitor-node warn"><span>UTR-07</span><span class="monitor-dot orange"></span></div>
+                    <div class="monitor-node ok"><span>DEN-12</span><span class="monitor-dot green"></span></div>
+                    <div class="monitor-node ok"><span>EHV-02</span><span class="monitor-dot green"></span></div>
+                    <div class="monitor-node reset"><span>GRN-05</span><span class="monitor-dot blue"></span></div>
+                  </div>
+                  <div class="monitor-alert">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    UTR-07: Anomaly detected — auto-reset initiated
+                  </div>
+                </div>
+              </div>
+            </div>
           </button>
         </div>
+        <!-- Desktop-only visual panel (hidden on mobile) -->
         <div class="features-visual">
           <div class="feature-visual-panel active" data-panel="0">
             <div class="visual-mockup">

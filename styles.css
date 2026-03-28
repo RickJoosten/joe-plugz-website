@@ -747,6 +747,11 @@ section {
   min-height: 400px;
 }
 
+/* Inline visuals (inside tabs) — hidden on desktop */
+.feature-inline-visual {
+  display: none;
+}
+
 .feature-visual-panel {
   display: none;
   animation: fadeUp 400ms var(--ease);
@@ -2091,30 +2096,57 @@ section {
   .problem-card:last-child { border-bottom: none; }
   .problem-card:first-child { padding-left: 0; }
 
-  /* Features - on mobile, show as stacked accordion cards */
-  .features-ecosystem { gap: 24px; }
+  /* Features - mobile stacking cards like lemonflow */
+  .features-ecosystem {
+    display: block;
+  }
+  .features-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
   .feature-tab {
     border-left: none;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 8px;
+    border: none;
+    border-radius: 24px;
+    padding: 32px 24px;
+    margin-bottom: 0;
+    background: #f7f8fa;
+    cursor: default;
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
   }
+  .feature-tab:nth-child(1) { top: 70px; z-index: 11; }
+  .feature-tab:nth-child(2) { top: 90px; z-index: 12; }
+  .feature-tab:nth-child(3) { top: 110px; z-index: 13; }
   .feature-tab.active {
-    border-color: var(--green);
-    background: var(--green-subtle);
+    border-color: transparent;
+    background: #f7f8fa;
   }
   .feature-tab h3 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
   }
-  .features-visual {
+  .feature-tab p {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  /* Show inline visuals on mobile */
+  .feature-inline-visual {
+    display: block;
+    margin-top: 4px;
+  }
+  .feature-inline-visual .visual-mockup {
     min-height: auto;
+    padding: 20px;
+    border-radius: 16px;
   }
-  .visual-mockup {
-    min-height: 300px;
-    padding: 24px;
+  /* Hide desktop visual panel on mobile */
+  .features-visual {
+    display: none;
   }
 
   /* Integration bento */
