@@ -2230,7 +2230,10 @@ section {
   .dash-row { flex-direction: column; }
   .monitor-grid { grid-template-columns: 1fr; }
   .footer-top { grid-template-columns: 1fr; }
-  .safe-secure-badges { flex-direction: column; align-items: center; }
+  .safe-secure-badges { flex-direction: row; justify-content: center; gap: 16px; }
+  .trust-badge-circle { width: 52px; height: 52px; }
+  .trust-badge-circle svg { width: 22px; height: 22px; }
+  .trust-badge-label { font-size: 10px; }
   .about-card { padding: 24px 20px; }
   .bento-feature-card { padding: 24px 20px; }
   .problem-heading { font-size: clamp(28px, 6vw, 40px); }
