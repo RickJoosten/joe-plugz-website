@@ -73,17 +73,13 @@
               <strong>Over ons</strong>
               <span>Ons team en onze missie</span>
             </a>
-            <a href="careers.html" class="dropdown-item">
-              <strong>Careers</strong>
-              <span>Werk bij Plugz</span>
-            </a>
             <a href="#contact" class="dropdown-item">
               <strong>Contact</strong>
               <span>Neem contact op</span>
             </a>
-            <a href="blog.html" class="dropdown-item">
-              <strong>Blog</strong>
-              <span>Nieuws &amp; inzichten</span>
+            <a href="#nieuws" class="dropdown-item">
+              <strong>Nieuws</strong>
+              <span>Artikelen &amp; inzichten</span>
             </a>
           </div>
         </div>
@@ -117,9 +113,8 @@
     <div class="mobile-menu-section">
       <span class="mobile-menu-label">Company</span>
       <a href="#over-ons">Over ons</a>
-      <a href="careers.html">Careers</a>
       <a href="#contact">Contact</a>
-      <a href="blog.html">Blog</a>
+      <a href="#nieuws">Nieuws</a>
     </div>
     <a href="#contact" class="btn-primary">Demo aanvragen</a>
   </div>
@@ -500,24 +495,24 @@
     <div class="container">
       <div class="news-header fade-in">
         <h2 class="news-heading">Nieuws</h2>
-        <a href="blog.html" class="news-see-more">Bekijk meer &rarr;</a>
+        <a href="#nieuws" class="news-see-more">Bekijk meer &rarr;</a>
       </div>
       <div class="news-grid fade-in">
-        <a href="#" class="news-card">
+        <a href="#" class="news-card" data-modal="modal-article-1">
           <div class="news-card-image" style="background: linear-gradient(135deg, #1a8a5c 0%, #2dd4a0 100%);">
             <span class="news-card-logo">Plugz</span>
           </div>
           <h3>Hoe AI de EV charging klantenservice transformeert</h3>
           <p class="news-card-meta">Product &mdash; 5 min read</p>
         </a>
-        <a href="#" class="news-card">
+        <a href="#" class="news-card" data-modal="modal-article-2">
           <div class="news-card-image" style="background: linear-gradient(135deg, #0d6644 0%, #18F291 100%);">
             <svg class="news-card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>
           </div>
           <h3>92% containment rate: wat betekent dat voor jouw operatie?</h3>
           <p class="news-card-meta">Insights &mdash; 4 min read</p>
         </a>
-        <a href="#" class="news-card">
+        <a href="#" class="news-card" data-modal="modal-article-3">
           <div class="news-card-image" style="background: #f0f0f0;">
             <span class="news-card-quote">&ldquo;Joe heeft onze operaties fundamenteel veranderd&rdquo;</span>
           </div>
@@ -572,6 +567,7 @@
           <div class="form-fields">
             <input type="text" name="firstname" placeholder="Jouw naam" required aria-label="Naam">
             <input type="email" name="email" placeholder="naam@bedrijf.nl" required aria-label="E-mailadres">
+            <input type="tel" name="phone" placeholder="+31 6 12345678" required aria-label="Telefoonnummer">
             <input type="text" name="company" placeholder="Bedrijfsnaam" required aria-label="Bedrijfsnaam">
           </div>
           <button type="submit" class="btn-primary btn-submit">Demo aanvragen</button>
@@ -700,12 +696,11 @@
         <div class="footer-col">
           <h4>Bedrijf</h4>
           <a href="#over-ons">Over ons</a>
-          <a href="careers.html">Careers</a>
           <a href="#contact">Contact</a>
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
-          <a href="blog.html">Blog</a>
+          <a href="#nieuws">Nieuws</a>
           <a href="#">Documentatie</a>
           <a href="#">Status</a>
         </div>
@@ -724,6 +719,120 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== ARTICLE MODALS ===== -->
+  <div class="article-modal-overlay" id="modal-article-1">
+    <div class="article-modal">
+      <button class="article-modal-close" aria-label="Sluiten">&times;</button>
+      <div class="article-modal-header" style="background: linear-gradient(135deg, #1a8a5c 0%, #2dd4a0 100%);">
+        <span class="news-card-logo">Plugz</span>
+      </div>
+      <div class="article-modal-body">
+        <p class="article-modal-meta">Product &mdash; 5 min read</p>
+        <h2>Hoe AI de EV charging klantenservice transformeert</h2>
+        <p>De EV-markt groeit explosief. Het aantal laadpunten in Europa verdubbelt iedere twee jaar, en daarmee ook het volume aan klantvragen. Charging operators staan voor een uitdaging: hoe schaal je support mee zonder je team evenredig te laten groeien?</p>
+        <h3>Het probleem: groei versus service</h3>
+        <p>Traditionele klantenservice draait op menselijke agents. Elk nieuw laadpunt genereert extra telefoontjes, chats en e-mails &mdash; van laadsessies die niet starten tot factuurvragen en storingen. Bij veel operators loopt de wachttijd op tot 6+ minuten, en escalatiepercentages stijgen mee met het netwerk.</p>
+        <p>Het gevolg: ontevreden klanten, overbelaste teams en stijgende operationele kosten. Voor CPOs die willen schalen is dit onhoudbaar.</p>
+        <h3>De oplossing: AI-native support</h3>
+        <p>Met een AI voice agent zoals Joe verandert het speelveld fundamenteel. In plaats van reactief wachten op calls, handelt Joe gesprekken autonoom af &mdash; 24/7, in 30+ talen. Joe begrijpt de context van een laadsessie, checkt real-time charger data via OCPP, en voert acties uit zoals remote resets of het doorsturen van factuurinformatie.</p>
+        <p>Het resultaat? Een containment rate van 92%, wat betekent dat slechts 8 van de 100 gesprekken nog door een menselijke agent opgepakt hoeven te worden.</p>
+        <h3>Wat betekent dit concreet?</h3>
+        <ul>
+          <li><strong>Wachttijd: van 6 minuten naar 0.</strong> Joe neemt direct op, zonder wachtrij.</li>
+          <li><strong>Kosten: tot 70% lager per gesprek.</strong> AI-afhandeling is een fractie van de kosten van een menselijk gesprek.</li>
+          <li><strong>Klanttevredenheid: 4.6 uit 5.</strong> Consistent, hoogwaardig en altijd beschikbaar.</li>
+          <li><strong>Schaalbaarheid: onbeperkt.</strong> Of je nu 1.000 of 100.000 laadpunten hebt, Joe schaalt mee zonder extra headcount.</li>
+        </ul>
+        <h3>De toekomst is proactief</h3>
+        <p>De volgende stap gaat verder dan reactieve support. Met proactieve monitoring detecteert Joe anomalie&euml;n in je netwerk v&oacute;&oacute;rdat drivers er last van hebben. Self-healing automations &mdash; zoals automatische charger resets &mdash; voorkomen dat problemen escaleren tot klachten.</p>
+        <p>AI in EV charging is geen toekomstmuziek meer. Het is de standaard voor operators die willen schalen zonder concessies te doen aan service.</p>
+        <div class="article-modal-cta">
+          <a href="#contact" class="btn-primary" onclick="document.getElementById('modal-article-1').classList.remove('open')">Demo aanvragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-modal-overlay" id="modal-article-2">
+    <div class="article-modal">
+      <button class="article-modal-close" aria-label="Sluiten">&times;</button>
+      <div class="article-modal-header" style="background: linear-gradient(135deg, #0d6644 0%, #18F291 100%);">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></svg>
+      </div>
+      <div class="article-modal-body">
+        <p class="article-modal-meta">Insights &mdash; 4 min read</p>
+        <h2>92% containment rate: wat betekent dat voor jouw operatie?</h2>
+        <p>Je hoort het getal steeds vaker in de wereld van AI-support: containment rate. Maar wat betekent het precies, en waarom is het d&eacute; metric die bepaalt of AI in je operatie echt werkt?</p>
+        <h3>Containment rate, uitgelegd</h3>
+        <p>De containment rate meet het percentage gesprekken dat volledig door AI wordt afgehandeld &mdash; zonder dat een menselijke agent hoeft in te grijpen. Bij Joe ligt dit op 92%. Dat betekent dat van elke 100 inkomende telefoontjes, chats of e-mails er 92 autonoom worden opgelost.</p>
+        <p>De overige 8% wordt warm overgedragen aan je team, inclusief volledige context en gesprekshistorie. Geen koude transfers, geen herhalingen.</p>
+        <h3>Waarom is 92% bijzonder?</h3>
+        <p>De gemiddelde containment rate van generieke AI-chatbots in klantenservice ligt tussen de 30-50%. Het verschil zit in specialisatie:</p>
+        <ul>
+          <li><strong>Domeinkennis:</strong> Joe is getraind op 50.000+ echte EV-interacties en begrijpt de nuances van laadsessies, OCPP-protocollen en charger hardware.</li>
+          <li><strong>Actiemogelijkheden:</strong> Joe kan daadwerkelijk acties uitvoeren &mdash; remote resets, kabelontgrendeling, sessie-stops &mdash; in plaats van alleen informatie geven.</li>
+          <li><strong>Context-aware:</strong> Door real-time integratie met je CPMS weet Joe precies wat de status is van een laadpunt, sessie of klantaccount.</li>
+        </ul>
+        <h3>De impact op je operatie</h3>
+        <p>Een containment rate van 92% heeft een cascade-effect op je hele operatie:</p>
+        <ul>
+          <li><strong>Teambelasting daalt met ~90%.</strong> Je support team handelt nog maar 8 van de 100 gesprekken af. Dat zijn de complexe cases waar menselijke expertise echt nodig is.</li>
+          <li><strong>Kosten per gesprek dalen tot 70%.</strong> AI-afhandeling kost een fractie van een menselijk gesprek.</li>
+          <li><strong>Schaalbaarheid wordt ontkoppeld van headcount.</strong> Verdubbel je netwerk zonder je team te verdubbelen.</li>
+          <li><strong>Consistentie stijgt.</strong> Elke klant krijgt dezelfde hoogwaardige service, 24/7, in 30+ talen.</li>
+        </ul>
+        <h3>Hoe meet je het zelf?</h3>
+        <p>In het Joe dashboard zie je de containment rate real-time, uitgesplitst per kanaal (voice, chat, e-mail), per type vraag en per tijdsperiode. Zo kun je precies zien waar AI het beste presteert en waar fine-tuning nodig is.</p>
+        <div class="article-modal-cta">
+          <a href="#contact" class="btn-primary" onclick="document.getElementById('modal-article-2').classList.remove('open')">Demo aanvragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-modal-overlay" id="modal-article-3">
+    <div class="article-modal">
+      <button class="article-modal-close" aria-label="Sluiten">&times;</button>
+      <div class="article-modal-header" style="background: #f0f0f0;">
+        <span class="news-card-quote" style="color: var(--heading);">&ldquo;Joe heeft onze operaties fundamenteel veranderd&rdquo;</span>
+      </div>
+      <div class="article-modal-body">
+        <p class="article-modal-meta">Case study &mdash; 7 min read</p>
+        <h2>Case study: 50five schaalt support met AI voice agent</h2>
+        <p><strong>Bedrijf:</strong> 50five &mdash; een snelgroeiende charge point operator actief in Nederland en Belgi&euml;, met een netwerk van duizenden publieke en semi-publieke laadpunten.</p>
+        <p><strong>Uitdaging:</strong> Het support team van 50five werd overspoeld. Met een groeiend netwerk steeg het aantal klantvragen met 40% per kwartaal. Wachttijden liepen op, de ticketkwaliteit daalde, en het team kon de groei niet bijbenen zonder fors te groeien.</p>
+        <h3>De situatie voor Joe</h3>
+        <ul>
+          <li>Gemiddelde wachttijd: 4-6 minuten</li>
+          <li>Ticketkwaliteit: 20% voldeed aan de interne standaard</li>
+          <li>Escalatiepercentage: 45% van alle gesprekken</li>
+          <li>Support beschikbaarheid: alleen tijdens kantooruren</li>
+        </ul>
+        <h3>De implementatie</h3>
+        <p>50five implementeerde Joe als primaire voice agent voor inkomende telefoontjes. De integratie met hun CPMS (charge point management system) duurde minder dan twee weken. Joe werd getraind op de specifieke laadpunt-types in het 50five-netwerk en gekoppeld aan hun bestaande CRM.</p>
+        <p>Bijzonder was de snelheid waarmee Joe productief werd: na een trainingsfase van 5 dagen op historische interactiedata was Joe operationeel &mdash; met directe toegang tot real-time charger data en de mogelijkheid om remote resets uit te voeren.</p>
+        <h3>De resultaten na 3 maanden</h3>
+        <ul>
+          <li><strong>Ticketkwaliteit: van 20% naar 93%.</strong> Joe levert consistente, complete antwoorden volgens de kwaliteitsstandaarden van 50five.</li>
+          <li><strong>Containment rate: 91%.</strong> Slechts 9 van de 100 gesprekken worden doorverbonden naar een menselijke agent.</li>
+          <li><strong>Wachttijd: 0 seconden.</strong> Joe neemt direct op, 24/7.</li>
+          <li><strong>Klanttevredenheid: van 3.2 naar 4.5 (uit 5).</strong> Drivers waarderen de snelle, accurate hulp.</li>
+          <li><strong>Kostenreductie: 62%.</strong> Het support team kon worden heringericht voor complexe, high-value cases.</li>
+        </ul>
+        <blockquote>
+          &ldquo;Van 20% naar 93% ticketkwaliteit &mdash; dat had ik niet voor mogelijk gehouden. Joe heeft onze operaties fundamenteel veranderd.&rdquo;
+          <cite>&mdash; Egbert Hietberg, 50five</cite>
+        </blockquote>
+        <h3>Wat maakte het verschil?</h3>
+        <p>Volgens 50five was het de combinatie van drie factoren: de diepe EV-domeinkennis van Joe, de directe integratie met hun charger backend, en de mogelijkheid om niet alleen te informeren maar ook te handelen (resets, unlocks, sessie-stops).</p>
+        <p>Het team van 50five focust nu volledig op complexe escalaties en proactieve netwerkoptimalisatie &mdash; precies waar menselijke expertise het meeste waarde toevoegt.</p>
+        <div class="article-modal-cta">
+          <a href="#contact" class="btn-primary" onclick="document.getElementById('modal-article-3').classList.remove('open')">Demo aanvragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="main.js"></script>
 </body>

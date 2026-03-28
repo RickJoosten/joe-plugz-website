@@ -169,6 +169,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ===== Article modals =====
+  document.querySelectorAll('.news-card[data-modal]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modalId = card.getAttribute('data-modal');
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  document.querySelectorAll('.article-modal-overlay').forEach(overlay => {
+    // Close on overlay click
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close button
+    const closeBtn = overlay.querySelector('.article-modal-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+  });
+
+  // Close modals on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.article-modal-overlay.open').forEach(modal => {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+  });
+
   // ===== Form submission =====
   const form = document.getElementById('demo-form');
   const formContainer = document.getElementById('form-container');
@@ -187,10 +229,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(form);
       const firstname = formData.get('firstname').trim();
       const email = formData.get('email').trim();
+      const phone = formData.get('phone').trim();
       const company = formData.get('company').trim();
 
       // Validation
-      if (!firstname || !email || !company) {
+      if (!firstname || !email || !phone || !company) {
         formError.textContent = 'Vul alle velden in.';
         formError.classList.add('show');
         return;
@@ -211,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fields: [
           { name: 'firstname', value: firstname },
           { name: 'email', value: email },
+          { name: 'phone', value: phone },
           { name: 'company', value: company }
         ],
         context: {
