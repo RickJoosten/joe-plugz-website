@@ -2169,17 +2169,23 @@ section {
   .bento-features { grid-template-columns: 1fr; }
   .bento-feature-card { padding: 28px; }
 
-  /* Metrics */
+  /* Metrics - 2 column grid, scaled numbers */
   .metrics-bento {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
   }
   .bento-card {
-    padding: 32px 20px;
+    padding: 28px 16px;
     position: relative;
     box-shadow: none;
-    border-radius: 20px;
+    border-radius: 16px;
+  }
+  .bento-number {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+  .bento-label {
+    font-size: 13px;
   }
 
   /* Break CTA */
